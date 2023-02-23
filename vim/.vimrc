@@ -87,3 +87,8 @@ inoremap '' ''
 
 " To search in MRU by default with CtrlP
 let g:ctrlp_cmd = 'CtrlPMRU'
+
+" Other auto-settings
+setlocal noswapfile " no swap files
+set softtabstop=4 " backspace deletes 4 spaces once
+set tabstop=4 " the length of tab is 4 
