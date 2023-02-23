@@ -26,7 +26,7 @@ set number
 " This is useful because you can tell, at a glance, what count is needed to
 " jump up or down to a particular line, by {count}k to go up or {count}j to go
 " down.
-set relativenumber
+"set relativenumber
 
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
@@ -47,6 +47,7 @@ set hidden
 " This setting makes search case-insensitive when all characters in the string
 " being searched are lowercase. However, the search becomes case-sensitive if
 " it contains any capital letters. This makes searching more convenient.
+set showmatch
 set ignorecase
 set smartcase
 
@@ -63,18 +64,26 @@ set noerrorbells visualbell t_vb=
 " sometimes be convenient.
 set mouse+=a
 
-" Try to prevent bad habits like using the arrow keys for movement. This is
-" not the only possible bad habit. For example, holding down the h/j/k/l keys
-" for movement, rather than using more efficient movement commands, is also a
-" bad habit. The former is enforceable through a .vimrc, while we don't know
-" how to prevent the latter.
-" Do this in normal mode...
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+" Indenting setting 
+filetype plugin indent on
+set autoindent smartindent expandtab shiftwidth=4
+
+" Paired symbols mapping
+inoremap { {}<left>
+inoremap {{ {
+inoremap {} {}
+inoremap [ []<left>
+inoremap [[ [
+inoremap [] []
+inoremap ( ()<left>
+inoremap (( (
+inoremap () ()
+inoremap " ""<left>
+inoremap "" ""
+inoremap ' ''<left>
+inoremap '' ''
+
+" Quickly move cursor
+
+" To search in MRU by default with CtrlP
+let g:ctrlp_cmd = 'CtrlPMRU'
