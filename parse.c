@@ -6,10 +6,11 @@ int main() {
     freopen("output.txt", "w", stdout);
     char prev[10], name[10];
     int num = 0;
-    strcpy(prev, "start");
+    scanf("%s\n", prev);
     while(scanf("%s\n", name) != EOF) {
-        num = 1 ? strcmp(prev, name) : num++;
+        num = strcmp(prev, name) ? 1 : num + 1;
         printf("S%sMUT%d.fasta.txt\n", name, num);
+        strcpy(prev, name);
     }
     fclose(stdin);
     fclose(stdout);
