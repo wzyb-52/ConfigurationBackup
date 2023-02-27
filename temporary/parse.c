@@ -2,8 +2,8 @@
 #include <string.h>
 
 int main() {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("543.csv", "r", stdin);
+    freopen("543.txt", "w", stdout);
     char prev[10], name[10];
     int num = 0;
     scanf("%s\n", prev);
