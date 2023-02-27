@@ -31,3 +31,7 @@ Refer to [this article](https://www.howtogeek.com/671422/how-to-use-tmux-on-linu
 - **}:** Swap the position of the current pane with the next.
 - **{:** Swap the position of the current pane with the previous.
 - **X:** Close the current pane.
+
+### Other Useful Commands
+
++ `[`: Enable scrolling. Use `q` to quit scrolling mode.
